@@ -21,7 +21,6 @@ body{
   border-radius: 10px;
   display: flex;
   overflow: hidden;
-  min-width: 500px;
   white-space: wrap;
 
 }
