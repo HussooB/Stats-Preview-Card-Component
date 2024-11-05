@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  @import url('https://fonts.googleapis.com/css2?family=Itim&family=Lexend+Deca:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Itim&family=Lexend+Deca:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 }
 .attribution { font-size: 11px; text-align: center;
 margin-top: 20px; }
@@ -14,28 +16,36 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Lexend Deca", sans-serif;
 }
 .big-container{
   height: auto;
-  width:63%;
+  width:90%;
+  max-width: 950px;
   background-color: hsl(244, 38%, 16%);
   border-radius: 10px;
   display: flex;
   overflow: hidden;
 
 }
+.image{
+  width:50%;
+  height: auto;
+}
 .image img{
   height: 100%;
-  opacity:0.4;
+  opacity:0.3;
   width:100%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   object-fit: cover;
+  filter:  brightness(1.3);
+  
   
 
 }
 .image{
-  background-color: hsl(277, 64%, 61%);
+  background-color: hsl(277, 72%, 53%);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -44,13 +54,16 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  margin: 2.5rem 0;
+  
 }
 .header h1{
-  width: 80%;
+  width: 90%;
   padding-left: 5rem;
   color:hsl(0, 0%, 100%);
   display: inline-block;
+  margin: 1.4rem  0;
 }
 .header span{
   color:hsl(277, 64%, 61%);
@@ -58,10 +71,11 @@ body{
 .par p{
   font-size: 15px;
   color:hsla(0, 0%, 100%, 0.75);
-  width:80%;
+  width:90%;
   line-height: 1.5rem;
   display:inline-block;
   padding-left: 5rem;
+  margin-bottom:2.7rem;
 }
 .info {
 display: flex;
@@ -69,56 +83,54 @@ width:80%;
 gap:2.8rem;
 padding-left: 2.1rem;
 padding-right: 1.9rem;
+margin-top: 1.5rem;
 }
 .info p span{
   color:white;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  font-family: "Red Hat Display", serif;
 }
 .info p{
   color:hsla(0, 0%, 100%, 0.6);
-  font-size: 0.9rem;
+  font-size: 0.97rem;
 }
-  @media (max-width: 375px ) {
-    .big-container {
-      flex-direction: column-reverse;
-      width: 90%; /* Adjust width for mobile */
-      height: auto;
-      position:relative
-    }
-  
-    .image img{
-      width: 100%;
-      height: auto;
-    }
-  
-    .image img {
-      border-radius: 10px 10px 0 0;
-      height: 100%;
-      opacity:0.7;
-
-    }
-  
-    .info-side {
-      width: 100%;
-      padding: 1rem;
-      text-align: center;
-      /* position: absolute; */
-      bottom: 0;
-    }
-    .header h1{
-      padding-bottom: 2rem;
-    }
-    
-    .header h1, .par p, .info  {
-      padding-left: 0px; 
-      text-align: center; 
-    }
-    .image {
-      /* position:absolute; */
-      top:0;
-    }
-    .info {
-      flex-direction: column;
-      margin-top: 1;
-    }
+@media (max-width: 375px) {
+  .big-container {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+    align-items: center;
   }
+
+  .image {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .image img {
+    opacity: 0.7;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .info-side {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+  }
+  .par{
+    margin-top: 0.9rem;
+  }
+  .header h1, .par p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .info {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    gap: 1rem;
+    align-items: center;
+  }
+}
